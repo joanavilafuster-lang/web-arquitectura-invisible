@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona: l'arquitectura invisible — Espai Cenit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @font-face {
+            font-family: 'Futura Now Headline';
+            src: url('fonts/FuturaNowHeadline-Light.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Futura Now Headline';
+            src: url('fonts/FuturaNowHeadline-Medium.ttf') format('truetype');
+            font-weight: 500;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Futura Now Headline', -apple-system, sans-serif;
+            background-color: #fafafa;
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between">
+    <!-- Cabecera con Logo Transparente -->
+    <header class="w-full max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center border-b border-gray-200 gap-6">
+        <div>
+            <img src="logocenit.png" alt="Espai Cenit" class="h-10 w-auto object-contain">
+        </div>
+        <div class="text-right">
+            <span class="text-xs tracking-widest uppercase text-gray-500 font-medium">Exposición Colectiva</span>
+            <h1 class="text-2xl font-bold tracking-tight mt-1 text-gray-900">Barcelona: l'arquitectura invisible</h1>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="w-full max-w-6xl mx-auto px-6 py-12 space-y-20">
+        
+        <!-- Bloque Hero: Imagen y Manifiesto -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <!-- Imagen Principal -->
+            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
+                <img src="imagen_para_web_barcelona_arquitectura_invisible_by_juan-pablo-biazutti_el-sagrado-merchandising_impresion-digital-sobre-papel-fotografico_29-7x42cm_2026.png" 
+                     alt="El sagrado merchandising - Juan Pablo Biazutti" 
+                     class="w-full h-auto rounded-lg shadow-sm object-cover">
+                <p class="text-xs text-gray-400 mt-3 text-right">«El sagrado merchandising» – Juan Pablo Biazutti</p>
+            </div>
+
+            <!-- Textos y Horarios -->
+            <div class="space-y-8 lg:pl-6 pt-4">
+                <div class="space-y-2 border-l-4 border-gray-900 pl-4">
+                    <p class="text-xl font-medium text-gray-800">Del 30 de octubre al 18 de diciembre de 2026</p>
+                    <p class="text-md text-gray-500">Próxima itinerancia: Marzo 2027, Galería Radionica (Belgrado)</p>
+                </div>
+                
+                <!-- Manifiesto -->
+                <div class="text-gray-700 leading-relaxed space-y-4 text-lg font-light">
+                    <p>Barcelona se ha convertido en una marca. Sus edificios, sus calles y sus monumentos forman parte de un catálogo de imágenes que el turismo consume y reproduce. A veces parece importar menos la arquitectura que la prueba de haber estado allí.</p>
+                    <p>La Sagrada Familia cabe en un imán de nevera. Al abrir su envoltorio, queda el molde vacío, la forma de algo que ya no está. Quizás ahí empieza otra arquitectura: la que desaparece detrás de su propia imagen.</p>
+                    <p>¿Qué vemos cuando miramos Barcelona? ¿La ciudad o su merchandising?</p>
+                    <p>Una mirada colectiva y a la vez muy personal del mapa invisible de nuestra ciudad.</p>
+                    <p class="font-medium text-sm text-gray-600 pt-2">por Juan Pablo Biazutti</p>
+                </div>
+
+                <!-- Horarios, Nota de Mediación y Flyer -->
+                <div class="bg-gray-100 p-6 rounded-lg space-y-4">
+                    <div>
+                        <h3 class="font-bold text-gray-900 uppercase tracking-wide text-sm">Horario de visita</h3>
+                        <p class="text-gray-600 mt-1">Miércoles a Sábado: <span class="font-medium text-gray-900">18:30 h – 21:00 h</span></p>
+                        <p class="text-gray-500 text-sm">Domingo, lunes y martes: Cerrado</p>
+                    </div>
+
+                    <!-- Enlace al Flyer / Invitación oficial -->
+                    <div class="border-t border-gray-200 pt-3">
+                        <a href="flyer-colectiva-bcn.jpg" target="_blank" class="text-xs font-medium text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 transition-colors">
+                            <span>↓ Ver / Descargar invitación oficial (Flyer)</span>
+                        </a>
+                    </div>
+
+                    <!-- Nota sutil de mediación y contacto directo -->
+                    <div class="border-t border-gray-200 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div class="text-xs text-gray-600">
+                            <span class="font-semibold text-gray-900 block">Mediación en sala:</span>
+                            <span>Inauguración (30 Oct) — <span class="text-gray-800 font-medium">Juan Pablo Biazutti & Joan Àvila</span></span>
+                        </div>
+                        <a href="https://instagram.com/art_joanavila" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 bg-white border border-gray-300 rounded-md text-xs font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900 transition-colors shadow-sm">
+                            Contactar por IG &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Directorio de Artistas -->
+        <section class="border-t border-gray-200 pt-16 space-y-10">
+            <div class="text-center">
+                <h3 class="text-3xl font-bold text-gray-900 tracking-tight">Artistas Participantes</h3>
+                <p class="text-gray-500 mt-2">18 miradas sobre el mapa invisible de la ciudad</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- 1. Monti Alberdi -->
+                <a href="artistas/monti-alberdi/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Monti Alberdi</h4>
+                    <p class="text-sm text-gray-500 mt-2">@montirri_</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 2. Joan Àvila -->
+                <a href="artistas/joan-avila/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Joan Àvila</h4>
+                    <p class="text-sm text-gray-500 mt-2">@art_joanavila</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 3. Agni Ayushatya -->
+                <a href="artistas/agni-ayushatya/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Agni Ayushatya</h4>
+                    <p class="text-sm text-gray-500 mt-2">@ayushatya</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 4. Juan Pablo Biazutti -->
+                <a href="artistas/juan-pablo-biazutti/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Juan Pablo Biazutti</h4>
+                    <p class="text-sm text-gray-500 mt-2">@biazuttiartdesign</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 5. Kathrin Boehme -->
+                <a href="artistas/kathrin-boehme/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Kathrin Boehme</h4>
+                    <p class="text-sm text-gray-500 mt-2">Vecinos</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 6. Natalia Byrdina -->
+                <a href="artistas/natalia-byrdina/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Natalia Byrdina</h4>
+                    <p class="text-sm text-gray-500 mt-2">@nbyrdina</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 7. Esteban Cornacchia -->
+                <a href="artistas/esteban-cornacchia/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Esteban Cornacchia</h4>
+                    <p class="text-sm text-gray-500 mt-2">@estebancornacchia</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 8. DaGraVile -->
+                <a href="artistas/dagravile/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">DaGraVile</h4>
+                    <p class="text-sm text-gray-500 mt-2">@dagravile</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 9. Marco DiGrandi -->
+                <a href="artistas/marco-digrandi/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Marco DiGrandi</h4>
+                    <p class="text-sm text-gray-500 mt-2">@marcodigrandi</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 10. Isabel Franco -->
+                <a href="artistas/isabel-franco/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Isabel Franco</h4>
+                    <p class="text-sm text-gray-500 mt-2">@tikipost</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 11. Aniola Guilera -->
+                <a href="artistas/aniola-guilera/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Aniola Guilera</h4>
+                    <p class="text-sm text-gray-500 mt-2">@aniola.guilera.art</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 12. Miren Huarte -->
+                <a href="artistas/miren-huarte/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Miren Huarte</h4>
+                    <p class="text-sm text-gray-500 mt-2">@miren_hua</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 13. Dasha Koen -->
+                <a href="artistas/dasha-koen/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Dasha Koen</h4>
+                    <p class="text-sm text-gray-500 mt-2">@dadashakoen</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 14. Cindy Kuijpers -->
+                <a href="artistas/cindy-kuijpers/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Cindy Kuijpers</h4>
+                    <p class="text-sm text-gray-500 mt-2">@ckamsterdam</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 15. Elsa Lada -->
+                <a href="artistas/elsa-lada/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Elsa Lada</h4>
+                    <p class="text-sm text-gray-500 mt-2">@elsa.lada</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 16. Kati Romeo Altimis -->
+                <a href="artistas/kati-romeo-altimis/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Kati Romeo Altimis</h4>
+                    <p class="text-sm text-gray-500 mt-2">@katipainting</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 17. Julieta Vega -->
+                <a href="artistas/julieta-vega/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Julieta Vega</h4>
+                    <p class="text-sm text-gray-500 mt-2">@juvega.art</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+
+                <!-- 18. Susanne Wehmer -->
+                <a href="artistas/susanne-wehmer/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
+                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Susanne Wehmer</h4>
+                    <p class="text-sm text-gray-500 mt-2">@susanne_wehmer</p>
+                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página con firma -->
+    <footer class="w-full bg-white border-t border-gray-200 mt-20">
+        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-6">
+            <div class="text-xs text-gray-500 space-y-1 text-center sm:text-left">
+                <p>© 2026 Barcelona: L'arquitectura invisible.</p>
+                <p>Todos los derechos reservados por los artistas.</p>
+            </div>
+            <!-- Firma Espai Cenit -->
+            <div>
+                <img src="firma_cenit_pequena.jpg" alt="Firma Espai Cenit" class="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply">
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
