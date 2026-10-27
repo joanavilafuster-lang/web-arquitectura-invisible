@@ -1,249 +1,223 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="bg-[#161513] text-[#f3f0ea]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barcelona: l'arquitectura invisible — Espai Cenit</title>
+    <title>Natalia Byrdina — Barcelona: l'arquitectura invisible</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @font-face {
             font-family: 'Futura Now Headline';
-            src: url('fonts/FuturaNowHeadline-Light.ttf') format('truetype');
+            src: url('../../fonts/FuturaNowHeadline-Light.ttf') format('truetype');
             font-weight: 300;
             font-style: normal;
         }
         @font-face {
             font-family: 'Futura Now Headline';
-            src: url('fonts/FuturaNowHeadline-Medium.ttf') format('truetype');
+            src: url('../../fonts/FuturaNowHeadline-Medium.ttf') format('truetype');
             font-weight: 500;
             font-style: normal;
         }
         body {
             font-family: 'Futura Now Headline', -apple-system, sans-serif;
-            background-color: #fafafa;
-            color: #1a1a1a;
+            background-color: #161513; 
+            color: #f3f0ea;
+        }
+        .texto-curatorial p {
+            margin-bottom: 1.25rem;
+            line-height: 1.7;
+        }
+        /* Custom scrollbar for immersive feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #161513;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a2825;
+            border-radius: 3px;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between">
-    <!-- Cabecera con Logo Transparente -->
-    <header class="w-full max-w-6xl mx-auto px-6 py-10 flex flex-col md:flex-row justify-between items-center border-b border-gray-200 gap-6">
-        <div>
-            <img src="logocenit.png" alt="Espai Cenit" class="h-10 w-auto object-contain">
-        </div>
-        <div class="text-right">
-            <span class="text-xs tracking-widest uppercase text-gray-500 font-medium">Exposición Colectiva</span>
-            <h1 class="text-2xl font-bold tracking-tight mt-1 text-gray-900">Barcelona: l'arquitectura invisible</h1>
-        </div>
+<body class="min-h-screen flex flex-col justify-between selection:bg-amber-900 selection:text-white">
+    
+    <!-- Cabecera Editorial -->
+    <header class="w-full max-w-7xl mx-auto px-8 py-10 flex justify-between items-center border-b border-white/10">
+        <a href="../../index.html" class="flex items-center gap-3 text-xs uppercase tracking-[0.25em] text-stone-400 hover:text-white transition-colors">
+            <span>&larr;</span> Volver al Índice
+        </a>
+        <div class="tracking-[0.3em] text-[10px] uppercase text-stone-500 font-mono hidden sm:block">Espai Cenit — Exposición</div>
+        <img src="../../logocenit.png" alt="Espai Cenit" class="h-7 w-auto object-contain brightness-200 invert opacity-80">
     </header>
 
     <!-- Contenido Principal -->
-    <main class="w-full max-w-6xl mx-auto px-6 py-12 space-y-20">
+    <main class="w-full max-w-6xl mx-auto px-6 py-16 space-y-24">
         
-        <!-- Bloque Hero: Imagen y Manifiesto -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <!-- Imagen Principal -->
-            <div class="bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                <img src="imagen_para_web_barcelona_arquitectura_invisible_by_juan-pablo-biazutti_el-sagrado-merchandising_impresion-digital-sobre-papel-fotografico_29-7x42cm_2026.png" 
-                     alt="El sagrado merchandising - Juan Pablo Biazutti" 
-                     class="w-full h-auto rounded-lg shadow-sm object-cover">
-                <p class="text-xs text-gray-400 mt-3 text-right">«El sagrado merchandising» – Juan Pablo Biazutti</p>
+        <!-- Bloque Principal / Header de Artista Asimétrico -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end border-b border-white/10 pb-16">
+            <div class="lg:col-span-8 space-y-4">
+                <span class="text-xs uppercase tracking-[0.3em] text-amber-500 font-mono">Artista Participante</span>
+                <h1 class="text-5xl sm:text-7xl font-light tracking-tight text-white">Natalia Byrdina</h1>
+            </div>
+            <div class="lg:col-span-4 flex lg:justify-end">
+                <a href="https://www.instagram.com/nbyrdina/" target="_blank" rel="noopener noreferrer" class="group inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-stone-400 hover:text-amber-400 transition-colors border border-white/10 px-5 py-3 rounded-full hover:border-amber-500/40">
+                    <span>Instagram</span>
+                    <span class="text-amber-500 group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Visor 1: Anverso y Reverso (Formato Cine / Gran Impacto) -->
+        <div class="space-y-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-2">
+                <div>
+                    <h2 class="text-2xl font-normal tracking-wide text-white">«El libro perdido»</h2>
+                    <p class="text-xs font-mono tracking-widest text-stone-400 uppercase">Vista de Anverso y Reverso</p>
+                </div>
+                <div class="flex items-center gap-4 font-mono text-xs text-stone-400 tracking-widest bg-white/[0.03] px-4 py-2 border border-white/10 rounded-full">
+                    <button id="btn-main-prev" class="hover:text-white transition-colors disabled:opacity-25">&larr; ANV</button>
+                    <span id="counter-main" class="text-amber-400 font-bold px-2">1 / 2</span>
+                    <button id="btn-main-next" class="hover:text-white transition-colors disabled:opacity-25">REV &rarr;</button>
+                </div>
             </div>
 
-            <!-- Textos y Horarios -->
-            <div class="space-y-8 lg:pl-6 pt-4">
-                <div class="space-y-2 border-l-4 border-gray-900 pl-4">
-                    <p class="text-xl font-medium text-gray-800">Del 30 de octubre al 18 de diciembre de 2026</p>
-                    <p class="text-md text-gray-500">Próxima itinerancia: Marzo 2027, Galería Radionica (Belgrado)</p>
-                </div>
-                
-                <!-- Manifiesto -->
-                <div class="text-gray-700 leading-relaxed space-y-4 text-lg font-light">
-                    <p>Barcelona se ha convertido en una marca. Sus edificios, sus calles y sus monumentos forman parte de un catálogo de imágenes que el turismo consume y reproduce. A veces parece importar menos la arquitectura que la prueba de haber estado allí.</p>
-                    <p>La Sagrada Familia cabe en un imán de nevera. Al abrir su envoltorio, queda el molde vacío, la forma de algo que ya no está. Quizás ahí empieza otra arquitectura: la que desaparece detrás de su propia imagen.</p>
-                    <p>¿Qué vemos cuando miramos Barcelona? ¿La ciudad o su merchandising?</p>
-                    <p>Una mirada colectiva y a la vez muy personal del mapa invisible de nuestra ciudad.</p>
-                    <p class="font-medium text-sm text-gray-600 pt-2">por Juan Pablo Biazutti</p>
-                </div>
-
-                <!-- Horarios, Nota de Mediación y Flyer -->
-                <div class="bg-gray-100 p-6 rounded-lg space-y-4">
-                    <div>
-                        <h3 class="font-bold text-gray-900 uppercase tracking-wide text-sm">Horario de visita</h3>
-                        <p class="text-gray-600 mt-1">Miércoles a Sábado: <span class="font-medium text-gray-900">18:30 h – 21:00 h</span></p>
-                        <p class="text-gray-500 text-sm">Domingo, lunes y martes: Cerrado</p>
-                    </div>
-
-                    <!-- Enlace al Flyer / Invitación oficial -->
-                    <div class="border-t border-gray-200 pt-3">
-                        <a href="flyer-colectiva-bcn.jpg" target="_blank" class="text-xs font-medium text-indigo-600 hover:text-indigo-800 flex items-center gap-1.5 transition-colors">
-                            <span>↓ Ver / Descargar invitación oficial (Flyer)</span>
-                        </a>
-                    </div>
-
-                    <!-- Nota sutil de mediación y contacto directo -->
-                    <div class="border-t border-gray-200 pt-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-                        <div class="text-xs text-gray-600">
-                            <span class="font-semibold text-gray-900 block">Mediación en sala:</span>
-                            <span>Inauguración (30 Oct) — <span class="text-gray-800 font-medium">Juan Pablo Biazutti & Joan Àvila</span></span>
-                        </div>
-                        <a href="https://instagram.com/art_joanavila" target="_blank" class="inline-flex items-center justify-center px-3 py-1.5 bg-white border border-gray-300 rounded-md text-xs font-medium text-gray-700 hover:border-gray-900 hover:text-gray-900 transition-colors shadow-sm">
-                            Contactar por IG &rarr;
-                        </a>
-                    </div>
-                </div>
+            <div class="w-full h-[550px] sm:h-[700px] bg-[#0f0e0d] border border-white/10 rounded-lg overflow-hidden flex items-center justify-center p-4 relative shadow-2xl">
+                <img id="img-main" class="max-w-full max-h-full object-contain filter contrast-[1.02]" src="natalia-byrdina_anverso_el-libro-perdido_zine_29_7x21_2026_estepona.JPG" alt="Anverso y reverso">
             </div>
-        </section>
+        </div>
 
-        <!-- Directorio de Artistas -->
-        <section class="border-t border-gray-200 pt-16 space-y-10">
-            <div class="text-center">
-                <h3 class="text-3xl font-bold text-gray-900 tracking-tight">Artistas Participantes</h3>
-                <p class="text-gray-500 mt-2">18 miradas sobre el mapa invisible de la ciudad</p>
+        <!-- Bloque de Texto Curatorial en Doble Columna Editorial -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 pt-12 border-t border-white/10 texto-curatorial text-sm text-stone-300 text-justify font-light">
+            <div class="space-y-6">
+                <div class="space-y-2">
+                    <span class="text-[10px] font-mono tracking-[0.2em] uppercase text-amber-500">Texto Curatorial</span>
+                    <h3 class="text-xl font-normal text-white tracking-wide">El libro perdido<br><span class="text-xs font-mono text-stone-400">Los museos que nunca existieron</span></h3>
+                </div>
+                <p>Hubo un tiempo en que existió un libro secreto que contenía proyectos de museos destinados a construirse en Barcelona, pero que nunca llegaron a materializarse.</p>
+                <p>¿Por qué fueron clasificados como secretos aquellos proyectos? ¿Quién decidió ocultarlos al público? ¿Y qué había en ellos de tan importante como para que su existencia tuviera que permanecer en secreto?</p>
+                <p>Las respuestas a estas preguntas se perdieron junto con el libro.</p>
+                <p>Durante décadas se creyó que había desaparecido. Con él se borraron de la memoria de la ciudad las ideas de los arquitectos, los sueños y las imágenes de otra Barcelona: una ciudad que podría haber existido.</p>
+                <p>Muchos años después, el libro fue encontrado. El tiempo lo había destruido casi por completo. Sus páginas se habían desintegrado, la encuadernación se había deshecho y su contenido, antaño secreto, se había convertido en huellas ilegibles y vacíos.</p>
+                <p>Ahora resulta imposible saber cómo habrían sido aquellos museos, qué se pretendía conservar entre sus paredes y por qué nunca llegaron a existir.</p>
+                <p>La forma textil del libro se convierte en la materialización de esta pérdida. Los hilos entrelazados, las roturas, los agujeros y los bordes que se deshacen evocan la fragilidad de la memoria y la imposibilidad de reconstruir un pasado desaparecido.</p>
+                <p>«El libro perdido» es un archivo imaginario de una Barcelona que nunca llegó a existir.</p>
+                <p>No conserva la historia de los edificios construidos, sino la memoria de aquello que nunca fue. De los proyectos ocultos, las posibilidades desaparecidas y los secretos que el tiempo ha conservado únicamente en forma de huellas.</p>
+                <p>Y quizás lo más importante de este libro no sea lo que alguna vez estuvo escrito en sus páginas, sino aquello que ahora permanecerá para siempre desconocido.</p>
             </div>
             
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                <!-- 1. Monti Alberdi -->
-                <a href="artistas/monti-alberdi/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Monti Alberdi</h4>
-                    <p class="text-sm text-gray-500 mt-2">@montirri_</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 2. Joan Àvila -->
-                <a href="artistas/joan-avila/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Joan Àvila</h4>
-                    <p class="text-sm text-gray-500 mt-2">@art_joanavila</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 3. Agni Ayushatya -->
-                <a href="artistas/agni-ayushatya/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Agni Ayushatya</h4>
-                    <p class="text-sm text-gray-500 mt-2">@ayushatya</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 4. Juan Pablo Biazutti -->
-                <a href="artistas/juan-pablo-biazutti/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Juan Pablo Biazutti</h4>
-                    <p class="text-sm text-gray-500 mt-2">@biazuttiartdesign</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 5. Kathrin Boehme -->
-                <a href="artistas/kathrin-boehme/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Kathrin Boehme</h4>
-                    <p class="text-sm text-gray-500 mt-2">Vecinos</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 6. Natalia Byrdina -->
-                <a href="artistas/natalia-byrdina/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Natalia Byrdina</h4>
-                    <p class="text-sm text-gray-500 mt-2">@nbyrdina</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 7. Esteban Cornacchia -->
-                <a href="artistas/esteban-cornacchia/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Esteban Cornacchia</h4>
-                    <p class="text-sm text-gray-500 mt-2">@estebancornacchia</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 8. DaGraVile -->
-                <a href="artistas/dagravile/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">DaGraVile</h4>
-                    <p class="text-sm text-gray-500 mt-2">@dagravile</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 9. Marco DiGrandi -->
-                <a href="artistas/marco-digrandi/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Marco DiGrandi</h4>
-                    <p class="text-sm text-gray-500 mt-2">@marcodigrandi</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 10. Isabel Franco -->
-                <a href="artistas/isabel-franco/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Isabel Franco</h4>
-                    <p class="text-sm text-gray-500 mt-2">@tikipost</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 11. Aniola Guilera -->
-                <a href="artistas/aniola-guilera/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Aniola Guilera</h4>
-                    <p class="text-sm text-gray-500 mt-2">@aniola.guilera.art</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 12. Miren Huarte -->
-                <a href="artistas/miren-huarte/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Miren Huarte</h4>
-                    <p class="text-sm text-gray-500 mt-2">@miren_hua</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 13. Dasha Koen -->
-                <a href="artistas/dasha-koen/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Dasha Koen</h4>
-                    <p class="text-sm text-gray-500 mt-2">@dadashakoen</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 14. Cindy Kuijpers -->
-                <a href="artistas/cindy-kuijpers/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Cindy Kuijpers</h4>
-                    <p class="text-sm text-gray-500 mt-2">@ckamsterdam</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 15. Elsa Lada -->
-                <a href="artistas/elsa-lada/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Elsa Lada</h4>
-                    <p class="text-sm text-gray-500 mt-2">@elsa.lada</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 16. Kati Romeo Altimis -->
-                <a href="artistas/kati-romeo-altimis/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Kati Romeo Altimis</h4>
-                    <p class="text-sm text-gray-500 mt-2">@katipainting</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 17. Julieta Vega -->
-                <a href="artistas/julieta-vega/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Julieta Vega</h4>
-                    <p class="text-sm text-gray-500 mt-2">@juvega.art</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
-
-                <!-- 18. Susanne Wehmer -->
-                <a href="artistas/susanne-wehmer/index.html" class="group block p-6 bg-white rounded-xl border border-gray-200 hover:border-gray-900 transition-all shadow-sm hover:shadow-md">
-                    <h4 class="text-lg font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">Susanne Wehmer</h4>
-                    <p class="text-sm text-gray-500 mt-2">@susanne_wehmer</p>
-                    <span class="inline-block mt-4 text-xs font-bold uppercase tracking-wide text-indigo-600">Ver obra &rarr;</span>
-                </a>
+            <div class="space-y-6 text-stone-400">
+                <div class="space-y-2">
+                    <span class="text-[10px] font-mono tracking-[0.2em] uppercase text-stone-500">Curatorial Text</span>
+                    <h3 class="text-xl font-normal text-stone-200 tracking-wide">The Lost Book<br><span class="text-xs font-mono text-stone-500">The Museums That Never Existed</span></h3>
+                </div>
+                <p>Once, there was a classified book containing plans for museums intended to be built in Barcelona, but which were never brought into existence.</p>
+                <p>Why were these projects classified? Who decided to conceal them from the public? And what was so important about them that their very existence had to remain a secret?</p>
+                <p>The answers to these questions were lost along with the book.</p>
+                <p>For decades, it was believed to have disappeared. With it, the architects' visions, ideas, and images of another Barcelona were erased from the city's memory — a city that might have existed.</p>
+                <p>Many years later, the book was discovered. Time had almost completely destroyed it. Its pages had disintegrated, its binding had fallen apart, and its once-secret contents had become illegible traces and empty spaces.</p>
+                <p>It is now impossible to determine what these museums might have looked like, what they were intended to preserve within their walls, or why they were never built.</p>
+                <p>The textile form of the book becomes a physical embodiment of this loss. The interwoven threads, tears, holes, and unraveling edges evoke the fragility of memory and the impossibility of reconstructing a vanished past.</p>
+                <p>"The Lost Book" is an imaginary archive of a Barcelona that never came into being.</p>
+                <p>It preserves not the history of buildings that were constructed, but the memory of what never existed. Of hidden visions, lost possibilities, and secrets that time has preserved only as traces.</p>
+                <p>And perhaps the most important thing about this book is not what was once written on its pages, but what will now remain forever unknown.</p>
             </div>
-        </section>
+        </div>
+
+        <!-- Visor 2: Lectura de Archivo / Detalles (Estilo Galería Inmersiva) -->
+        <div class="space-y-8 pt-16 border-t border-white/10">
+            <div class="text-center space-y-2 max-w-xl mx-auto">
+                <span class="text-xs font-mono uppercase tracking-[0.3em] text-amber-500">Inmersión en el Archivo</span>
+                <h3 class="text-3xl font-light text-white">Lectura de páginas conservadas</h3>
+                <p class="text-xs text-stone-400">Navegación detallada por el interior de la pieza textil</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-[#0f0e0d] p-6 sm:p-10 rounded-xl border border-white/10 shadow-2xl space-y-6">
+                
+                <div class="w-full h-[500px] sm:h-[650px] bg-[#161513] rounded-lg overflow-hidden flex items-center justify-center p-2 relative">
+                    <img id="img-book" class="max-w-full max-h-full object-contain filter contrast-[1.02]" src="natalia-byrdina_el_libro_perdido_detalle_8614.JPG" alt="Página del libro">
+                </div>
+                
+                <div class="flex justify-between items-center pt-4 border-t border-white/10 font-mono text-xs text-stone-400">
+                    <button id="btn-book-prev" class="hover:text-white transition-colors disabled:opacity-25 px-4 py-2 bg-white/[0.03] rounded border border-white/10">&larr; Anterior</button>
+                    <div class="flex flex-col items-center">
+                        <span class="text-[9px] text-stone-500 uppercase tracking-widest mb-1">Secuencia</span>
+                        <span id="counter-book" class="font-bold text-amber-400 text-sm">1 / 11</span>
+                    </div>
+                    <button id="btn-book-next" class="hover:text-white transition-colors disabled:opacity-25 px-4 py-2 bg-white/[0.03] rounded border border-white/10">Siguiente &rarr;</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
-    <!-- Pie de página con firma -->
-    <footer class="w-full bg-white border-t border-gray-200 mt-20">
-        <div class="max-w-6xl mx-auto px-6 py-10 flex flex-col sm:flex-row justify-between items-center gap-6">
-            <div class="text-xs text-gray-500 space-y-1 text-center sm:text-left">
+    <!-- Pie de página Minimalista -->
+    <footer class="w-full bg-[#11100f] border-t border-white/10 mt-32">
+        <div class="max-w-7xl mx-auto px-8 py-12 flex flex-col sm:flex-row justify-between items-center gap-8">
+            <div class="text-xs text-stone-500 space-y-1 text-center sm:text-left font-mono">
                 <p>© 2026 Barcelona: L'arquitectura invisible.</p>
-                <p>Todos los derechos reservados por los artistas.</p>
+                <p class="text-stone-600">Espai Cenit Gallery Archive</p>
             </div>
-            <!-- Firma Espai Cenit -->
             <div>
-                <img src="firma_cenit_pequena.jpg" alt="Firma Espai Cenit" class="h-12 w-auto opacity-80 hover:opacity-100 transition-opacity mix-blend-multiply">
+                <img src="../../firma_cenit_pequena.jpg" alt="Firma Espai Cenit" class="h-10 w-auto opacity-60 hover:opacity-100 transition-opacity invert mix-blend-screen">
             </div>
         </div>
     </footer>
+
+    <!-- Script de Cambio Instantáneo -->
+    <script>
+        function iniciarVisor(imgId, prevBtnId, nextBtnId, counterId, imagenes) {
+            let actual = 0;
+            const imgEl = document.getElementById(imgId);
+            const prevBtn = document.getElementById(prevBtnId);
+            const nextBtn = document.getElementById(nextBtnId);
+            const counter = document.getElementById(counterId);
+
+            if (!imgEl || !prevBtn || !nextBtn || !counter) return;
+
+            function actualizar(nuevoIndice) {
+                if (nuevoIndice < 0 || nuevoIndice >= imagenes.length) return;
+                
+                actual = nuevoIndice;
+                imgEl.src = imagenes[actual];
+                
+                counter.innerText = (actual + 1) + " / " + imagenes.length;
+                prevBtn.disabled = (actual === 0);
+                nextBtn.disabled = (actual === imagenes.length - 1);
+            }
+
+            prevBtn.addEventListener('click', () => actualizar(actual - 1));
+            nextBtn.addEventListener('click', () => actualizar(actual + 1));
+
+            // Estado inicial
+            prevBtn.disabled = true;
+            nextBtn.disabled = imagenes.length <= 1;
+            counter.innerText = "1 / " + imagenes.length;
+        }
+
+        // Listas de imágenes oficiales
+        const fotosPrincipal = [
+            "natalia-byrdina_anverso_el-libro-perdido_zine_29_7x21_2026_estepona.JPG",
+            "natalia-byrdina_reverso_el-libro-perdido_zine_29_7x21_2026_estepona.JPG"
+        ];
+        
+        const fotosLibro = [
+            "natalia-byrdina_el_libro_perdido_detalle_8614.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8615.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8616.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8617.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8619.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8620.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8621.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8622.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8623.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8624.JPG",
+            "natalia-byrdina_el_libro_perdido_detalle_8625.JPG"
+        ];
+
+        // Arrancar ambos visores
+        iniciarVisor('img-main', 'btn-main-prev', 'btn-main-next', 'counter-main', fotosPrincipal);
+        iniciarVisor('img-book', 'btn-book-prev', 'btn-book-next', 'counter-book', fotosLibro);
+    </script>
 </body>
 </html>
