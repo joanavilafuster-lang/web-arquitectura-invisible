@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barcelona: L'arquitectura invisible — Exposición Colectiva</title>
+    <style>
+        :root {
+            --bg-color: #0b0b0b;
+            --panel-bg: #141414;
+            --accent: #d4af37;
+            --text-main: #f0f0f0;
+            --text-muted: #999;
+            --border: #262626;
+        }
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: var(--panel-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            box-sizing: border-box;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+        .gallery-header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 30px;
+        }
+        .gallery-header h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+            margin: 0 0 10px 0;
+        }
+        .gallery-header h1 {
+            font-size: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            margin: 0 0 15px 0;
+        }
+        .dates {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+        }
+        .tour {
+            font-size: 0.85rem;
+            color: #888;
+            font-style: italic;
+        }
+        .curatorial {
+            line-height: 1.8;
+            color: #ccc;
+            margin-bottom: 40px;
+            text-align: justify;
+        }
+        .info-section {
+            background: #111;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 40px;
+        }
+        .info-section h3 {
+            margin-top: 0;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #fff;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+        .info-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .info-section li {
+            padding: 8px 0;
+            color: #bbb;
+            font-size: 0.95rem;
+            border-bottom: 1px dashed rgba(255,255,255,0.05);
+        }
+        .info-section li:last-child {
+            border-bottom: none;
+        }
+        .flyer-link {
+            display: inline-block;
+            margin-top: 15px;
+            color: #fff;
+            text-decoration: none;
+            background: #222;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .flyer-link:hover {
+            background: #333;
+        }
+        h2 {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            margin-bottom: 25px;
+        }
+        .artists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .artist-card {
+            background: #111;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: border-color 0.2s;
+        }
+        .artist-card:hover {
+            border-color: #555;
+        }
+        .artist-name {
+            font-weight: bold;
+            color: #fff;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .artist-handle {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+        .artist-link {
+            font-size: 0.85rem;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: #1a1a1a;
+            padding: 6px 10px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+        .artist-link:hover {
+            background: #262626;
+        }
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 50px;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="gallery-header">
+        <h3>Espai Cenit • Exposición Colectiva</h3>
+        <h1>Barcelona: L'arquitectura invisible</h1>
+        <div class="dates">Del 30 de octubre al 18 de diciembre de 2026</div>
+        <div class="tour">Próxima itinerancia: Marzo 2027, Galería Radionica (Belgrado)</div>
+    </div>
+
+    <div class="curatorial">
+        <p>Barcelona se ha convertido en una marca. Sus edificios, sus calles y sus monumentos forman parte de un catálogo de imágenes que el turismo consume y reproduce. A veces parece importar menos la arquitectura que la prueba de haber estado allí.</p>
+        <p>La Sagrada Familia cabe en un imán de nevera. Al abrir su envoltorio, queda el molde vacío, la forma de algo que ya no está. Quizás ahí empieza otra arquitectura: la que desaparece detrás de su propia imagen.</p>
+        <p>¿Qué vemos cuando miramos Barcelona? ¿La ciudad o su merchandising?</p>
+        <p>Una mirada colectiva y a la vez muy personal del mapa invisible de nuestra ciudad.</p>
+    </div>
+
+    <div class="info-section">
+        <h3>Horario de visita</h3>
+        <ul>
+            <li><strong>Miércoles a Sábado:</strong> 18:30 h – 21:00 h</li>
+            <li><strong>Domingo, lunes y martes:</strong> Cerrado</li>
+        </ul>
+        <a href="flyer-colectiva-bcn.jpg" target="_blank" class="flyer-link">↓ Ver / Descargar invitación oficial (Flyer)</a>
+    </div>
+
+    <h2>Artistas Participantes</h2>
+    <div class="artists-grid">
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Monti Alberdi</div>
+                <div class="artist-handle">@montirri_</div>
+            </div>
+            <a href="artistas/monti-alberdi/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Joan Àvila</div>
+                <div class="artist-handle">@art_joanavila</div>
+            </div>
+            <a href="artistas/joan-avila/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Agni Ayushatya</div>
+                <div class="artist-handle">@ayushatya</div>
+            </div>
+            <a href="artistas/agni-ayushatya/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Juan Pablo Biazutti</div>
+                <div class="artist-handle">@biazuttiartdesign</div>
+            </div>
+            <a href="artistas/juan-pablo-biazutti/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Kathrin Boehme</div>
+                <div class="artist-handle">Vecinos</div>
+            </div>
+            <a href="artistas/kathrin-boehme/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Natalia Byrdina</div>
+                <div class="artist-handle">@nbyrdina</div>
+            </div>
+            <a href="artistas/natalia-byrdina/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Esteban Cornacchia</div>
+                <div class="artist-handle">@estebancornacchia</div>
+            </div>
+            <a href="artistas/esteban-cornacchia/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">DaGraVile</div>
+                <div class="artist-handle">@dagravile</div>
+            </div>
+            <a href="artistas/dagravile/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Marco DiGrandi</div>
+                <div class="artist-handle">@marcodigrandi</div>
+            </div>
+            <a href="artistas/marco-digrandi/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Isabel Franco</div>
+                <div class="artist-handle">@tikipost</div>
+            </div>
+            <a href="artistas/isabel-franco/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Aniola Guilera</div>
+                <div class="artist-handle">@aniola.guilera.art</div>
+            </div>
+            <a href="artistas/aniola-guilera/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Miren Huarte</div>
+                <div class="artist-handle">@miren_hua</div>
+            </div>
+            <a href="artistas/miren-huarte/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Dasha Koen</div>
+                <div class="artist-handle">@dadashakoen</div>
+            </div>
+            <a href="artistas/dasha-koen/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Cindy Kuijpers</div>
+                <div class="artist-handle">@ckamsterdam</div>
+            </div>
+            <a href="artistas/cindy-kuijpers/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Elsa Lada</div>
+                <div class="artist-handle">@elsa.lada</div>
+            </div>
+            <a href="artistas/elsa-lada/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Kati Romeo Altimis</div>
+                <div class="artist-handle">@katipainting</div>
+            </div>
+            <a href="artistas/kati-romeo-altimis/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Julieta Vega</div>
+                <div class="artist-handle">@juvega.art</div>
+            </div>
+            <a href="artistas/julieta-vega/" class="artist-link">Ver obra →</a>
+        </div>
+        <div class="artist-card">
+            <div>
+                <div class="artist-name">Susanne Wehmer</div>
+                <div class="artist-handle">@susanne_wehmer</div>
+            </div>
+            <a href="artistas/susanne-wehmer/" class="artist-link">Ver obra →</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        © 2026 Barcelona: L'arquitectura invisible. Todos los derechos reservados por los artistas.
+    </div>
+</div>
+
+</body>
+</html>
